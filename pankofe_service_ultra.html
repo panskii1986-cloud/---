@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ПанКофе Сервис — ремонт кофемашин в Ростове-на-Дону</title>
+<meta name="description" content="ПанКофе Сервис. Ремонт и обслуживание кофемашин с выездом на дом и в офис по Ростову-на-Дону, Аксаю, Батайску и ближайшим населённым пунктам.">
+<style>
+:root{--espresso:#1c120e;--coffee:#4b2b1d;--cream:#f8f3ec;--paper:#fffdf9;--gold:#c98a42;--gold2:#e3b16d;--ink:#241914;--muted:#756b64;--line:#e8ddd1;--green:#16845a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 22px}
+.top{background:#130c09;color:#eadfd7;font-size:13px}.top .wrap{display:flex;justify-content:space-between;gap:20px;padding:9px 22px}.top strong{color:#fff}
+header{background:linear-gradient(125deg,#1c110c 0%,#3a2117 48%,#5b3523 100%);color:#fff;overflow:hidden}.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}.logo{font-size:25px;font-weight:950;letter-spacing:-.7px}.logo span{color:var(--gold2)}.navlinks{display:flex;gap:25px;font-weight:700;font-size:14px}.navphone{font-weight:900;font-size:18px;color:#f2c17d}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;padding:65px 0 85px}.eyebrow{display:inline-flex;padding:8px 13px;border:1px solid #ffffff2c;border-radius:100px;color:#f2c17d;text-transform:uppercase;letter-spacing:1.5px;font-size:12px;font-weight:900}.hero h1{font-size:clamp(44px,6vw,75px);line-height:.98;letter-spacing:-3px;margin:18px 0 10px}.hero .phone{display:block;color:#f4c47f;font-size:30px;font-weight:950;margin-bottom:20px}.hero p{font-size:19px;color:#eadfd7;max-width:640px}.actions{display:flex;flex-wrap:wrap;gap:11px;margin:28px 0}.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 20px;border-radius:12px;font-weight:900;border:1px solid transparent}.btn.gold{background:var(--gold);color:#1e120b}.btn.white{background:#fff;color:#241610}.btn.dark{background:#ffffff12;border-color:#ffffff36;color:#fff}.trust{display:flex;flex-wrap:wrap;gap:15px;color:#ddcfc5;font-size:14px}.trust span{display:flex;gap:7px;align-items:center}
+.machine-stage{min-height:500px;border-radius:30px;position:relative;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 20%,#a76c3e 0,#5b3423 30%,#21120c 72%);box-shadow:0 35px 80px #0008;border:1px solid #ffffff18;overflow:hidden}.machine{width:245px;height:320px;border-radius:32px 32px 20px 20px;background:linear-gradient(105deg,#171717,#777 36%,#252525 72%,#101010);box-shadow:inset 0 0 0 8px #101010,0 35px 55px #0009;position:relative}.machine:before{content:"";position:absolute;left:42px;right:42px;top:45px;height:95px;border-radius:10px;background:#161616;box-shadow:inset 0 0 0 4px #555}.machine:after{content:"☕";position:absolute;bottom:26px;left:0;right:0;text-align:center;font-size:62px;color:#e4b06b}.machine-stage .label{position:absolute;bottom:20px;left:20px;right:20px;background:#120b08d9;border:1px solid #ffffff1c;border-radius:14px;padding:12px 15px;font-weight:800;text-align:center}
+section{padding:82px 0}.head{text-align:center;max-width:750px;margin:0 auto 44px}.head h2{font-size:clamp(32px,4vw,48px);line-height:1.05;letter-spacing:-1.5px;margin:0 0 12px}.head p{color:var(--muted);font-size:18px;margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:27px;box-shadow:0 10px 30px #4b2b1d0a}.ico{font-size:31px}.card h3{font-size:20px;margin:12px 0 7px}.card p{margin:0;color:var(--muted)}
+.dark{background:var(--espresso);color:#fff}.dark .head p{color:#d6c9c1}.dark .card{background:#2a1a13;border-color:#4a3024}.dark .card p{color:#d4c5bc}
+.brands{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}.brand{background:#fff;border:1px solid var(--line);padding:13px 19px;border-radius:100px;font-weight:900}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.price{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px}.price strong{font-size:25px;color:var(--coffee)}.price .amount{font-size:30px;font-weight:950;margin:15px 0}.price small{color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{position:relative;padding-top:60px}.num{position:absolute;top:20px;left:20px;width:40px;height:40px;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:#fff;font-weight:950}
+.area{background:#efe3d6}.areas{display:grid;grid-template-columns:repeat(2,1fr);max-width:850px;margin:auto;gap:12px}.area-item{background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px;font-weight:800}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review{background:#fff;border:1px solid var(--line);border-radius:20px;padding:25px}.stars{color:#c98a42;letter-spacing:2px}.review p{font-size:16px}.review b{display:block;font-size:14px;margin-top:12px}.review small{display:block;color:var(--muted);margin-top:2px}
+.cta{background:linear-gradient(130deg,#4c2a1c,#9b6030);color:#fff;border-radius:30px;padding:55px}.cta-grid{display:grid;grid-template-columns:1fr .8fr;gap:35px;align-items:center}.cta h2{font-size:clamp(34px,4vw,50px);line-height:1;margin:0 0 15px}.cta p{color:#eadfd7;font-size:18px}.form{background:#fff;border-radius:18px;padding:22px;color:var(--ink)}.form input,.form textarea{width:100%;padding:14px;border:1px solid #ddd0c3;border-radius:10px;margin-bottom:10px;font:inherit}.form textarea{min-height:90px;resize:vertical}.form button{width:100%;border:0;cursor:pointer;font:inherit}.note{font-size:12px;color:#887d74;margin-top:10px}
+footer{background:#140c09;color:#bcaea5;padding:30px 0}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px}
+@media(max-width:850px){.navlinks{display:none}.hero,.cta-grid{grid-template-columns:1fr}.machine-stage{min-height:340px}.grid,.price-grid,.reviews,.steps{grid-template-columns:1fr}.areas{grid-template-columns:1fr}.top .wrap{display:none}.hero{padding-top:45px}.cta{padding:35px 22px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span>☕ Ремонт кофемашин с выездом</span><span>Ростов-на-Дону и ближайшие населённые пункты</span></div></div>
+<header>
+<div class="wrap">
+<nav class="nav"><div class="logo">ПанКофе <span>Сервис</span></div><div class="navlinks"><a href="#services">Услуги</a><a href="#brands">Бренды</a><a href="#prices">Цены</a><a href="#reviews">Отзывы</a></div><a class="navphone" href="tel:+79281115336">8 928 111-53-36</a></nav>
+<div class="hero">
+<div>
+<span class="eyebrow">Мастер с выездом на дом и в офис</span>
+<h1>Вернём вашей кофемашине вкус настоящего кофе</h1>
+<a class="phone" href="tel:+79281115336">8 928 111-53-36</a>
+<p>Диагностика, ремонт и обслуживание кофемашин. Без необходимости везти тяжёлую технику через весь город.</p>
+<div class="actions"><a class="btn gold" href="tel:+79281115336">📞 Вызвать мастера</a><a class="btn white" href="https://t.me/+79281115336">✈️ Telegram</a><a class="btn dark" href="https://max.ru">💬 MAX</a></div>
+<div class="trust"><span>✓ Выезд к клиенту</span><span>✓ Диагностика</span><span>✓ Проверка после ремонта</span></div>
+</div>
+<div class="machine-stage"><div class="machine"></div><div class="label">Профессиональный ремонт кофемашин на месте</div></div>
+</div>
+</div>
+</header>
+
+<section id="services"><div class="wrap"><div class="head"><h2>Когда нужна помощь мастера</h2><p>Берусь за типовые неисправности бытовых и офисных кофемашин.</p></div>
+<div class="grid">
+<div class="card"><div class="ico">💧</div><h3>Кофемашина течёт</h3><p>Ищем источник протечки и проверяем гидросистему, соединения и клапаны.</p></div>
+<div class="card"><div class="ico">☕</div><h3>Не делает кофе</h3><p>Разбираемся с подачей воды, заварочным блоком, помпой и другими узлами.</p></div>
+<div class="card"><div class="ico">🔥</div><h3>Не греет</h3><p>Диагностируем систему нагрева, датчики температуры и питание.</p></div>
+<div class="card"><div class="ico">⚙️</div><h3>Шумит или не запускается</h3><p>Проверяем приводы, насос, электронику и механические узлы.</p></div>
+<div class="card"><div class="ico">🧼</div><h3>Чистка и профилактика</h3><p>Удаление накипи, очистка и профилактическое обслуживание кофемашины.</p></div>
+<div class="card"><div class="ico">🔧</div><h3>Замена деталей</h3><p>Изношенные элементы меняются после согласования стоимости ремонта.</p></div>
+</div></div></section>
+
+<section id="brands" style="padding-top:0"><div class="wrap"><div class="head"><h2>Популярные бренды</h2><p>Если вашей модели нет в списке — отправьте фото шильдика в Telegram или MAX.</p></div><div class="brands">
+<span class="brand">DeLonghi</span><span class="brand">Saeco</span><span class="brand">Philips</span><span class="brand">Jura</span><span class="brand">Bosch</span><span class="brand">Siemens</span><span class="brand">Krups</span><span class="brand">Melitta</span>
+</div></div></section>
+
+<section class="dark"><div class="wrap"><div class="head"><h2>Почему обращаются в ПанКофе Сервис</h2><p>Задача — не просто запустить кофемашину, а разобраться с причиной неисправности.</p></div><div class="grid">
+<div class="card"><div class="ico">🏠</div><h3>Выезд к вам</h3><p>Не нужно самостоятельно везти кофемашину в сервис.</p></div>
+<div class="card"><div class="ico">🔎</div><h3>Понятная диагностика</h3><p>Объясняю, что сломалось и какие варианты ремонта возможны.</p></div>
+<div class="card"><div class="ico">✅</div><h3>Проверка результата</h3><p>После работы проверяем кофемашину и её основные функции.</p></div>
+</div></div></section>
+
+<section id="prices"><div class="wrap"><div class="head"><h2>Ориентировочная стоимость</h2><p>Точная цена зависит от модели, причины неисправности и необходимых деталей.</p></div><div class="price-grid">
+<div class="price"><h3>Диагностика</h3><div class="amount">от 500 ₽</div><small>Точная стоимость уточняется при обращении.</small></div>
+<div class="price"><h3>Обслуживание</h3><div class="amount">от 1 500 ₽</div><small>Зависит от модели и объёма работ.</small></div>
+<div class="price"><h3>Ремонт</h3><div class="amount">от 1 000 ₽</div><small>Запчасти и сложность ремонта рассчитываются отдельно.</small></div>
+</div></div></section>
+
+<section style="padding-top:0"><div class="wrap"><div class="head"><h2>Как проходит выезд</h2><p>Четыре простых шага от заявки до чашки кофе.</p></div><div class="steps">
+<div class="card step"><div class="num">1</div><h3>Заявка</h3><p>Звоните или пишете в мессенджер.</p></div>
+<div class="card step"><div class="num">2</div><h3>Согласование</h3><p>Уточняем модель, неисправность и адрес.</p></div>
+<div class="card step"><div class="num">3</div><h3>Диагностика</h3><p>Мастер осматривает и тестирует машину.</p></div>
+<div class="card step"><div class="num">4</div><h3>Ремонт</h3><p>Согласовываем работу и устраняем неисправность.</p></div>
+</div></div></section>
+
+<section class="area"><div class="wrap"><div class="head"><h2>Зона выезда</h2><p>Ростов-на-Дону и ближайшие города и посёлки. Возможность выезда уточняйте по телефону.</p></div><div class="areas"><div class="area-item">📍 Ростов-на-Дону</div><div class="area-item">📍 Аксай</div><div class="area-item">📍 Батайск</div><div class="area-item">📍 Ближайшие населённые пункты</div></div></div></section>
+
+<section id="reviews"><div class="wrap"><div class="head"><h2>Отзывы клиентов</h2><p>Примеры отзывов для оформления сайта. Перед публикацией замените их на реальные отзывы ваших клиентов.</p></div><div class="reviews">
+<div class="review"><div class="stars">★★★★★</div><p>«Кофемашина перестала нормально подавать кофе и начала течь. Мастер приехал, быстро нашёл причину и всё объяснил. После ремонта машина работает отлично.»</p><b>Александр</b><small>Ростов-на-Дону</small></div>
+<div class="review"><div class="stars">★★★★★</div><p>«Долго откладывала ремонт, потому что не хотелось везти кофемашину в сервис. Очень удобно, что мастер приехал домой. Всё проверил и устранил неисправность.»</p><b>Марина</b><small>Батайск</small></div>
+<div class="review"><div class="stars">★★★★★</div><p>«Кофемашина стала сильно шуметь и периодически не запускалась. Мастер провёл диагностику, рассказал, что именно вышло из строя, и после ремонта проблема исчезла.»</p><b>Дмитрий</b><small>Аксай</small></div>
+<div class="review"><div class="stars">★★★★★</div><p>«Обращалась по поводу протечки и чистки кофемашины. Понравилось, что мастер не просто сделал ремонт, а объяснил, как правильно ухаживать за машиной дальше.»</p><b>Ольга</b><small>Ростов-на-Дону</small></div>
+<div class="review"><div class="stars">★★★★★</div><p>«Хороший вариант для тех, кто не хочет самостоятельно везти тяжёлую кофемашину в сервис. Договорились о времени, мастер приехал, всё проверил и сделал.»</p><b>Игорь</b><small>Ростов-на-Дону</small></div>
+<div class="review"><div class="stars">★★★★★</div><p>«После нескольких попыток самостоятельно разобраться с кофемашиной решила обратиться к мастеру. Проблему нашли достаточно быстро. Теперь снова пьём нормальный кофе дома.»</p><b>Елена</b><small>Ростов-на-Дону</small></div>
+</div></div></section>
+
+<section><div class="wrap"><div class="cta"><div class="cta-grid"><div><h2>Кофемашина сломалась?</h2><p>Позвоните или оставьте заявку. Опишите проблему — свяжемся с вами для уточнения модели, неисправности и адреса выезда.</p><div class="actions"><a class="btn white" href="tel:+79281115336">📞 8 928 111-53-36</a><a class="btn dark" href="https://t.me/+79281115336">Telegram</a><a class="btn dark" href="https://max.ru">MAX</a></div></div>
+<form class="form" onsubmit="event.preventDefault(); alert('Спасибо! Для подключения реальной отправки заявки нужно указать, куда получать сообщения.');"><input placeholder="Ваше имя"><input type="tel" placeholder="Номер телефона"><textarea placeholder="Что случилось с кофемашиной?"></textarea><button class="btn gold" type="submit">Отправить заявку</button><div class="note">Форма демонстрационная — подключение отправки заявок на телефон/Telegram делается отдельно.</div></form></div></div></div></section>
+
+<footer><div class="wrap foot"><span>© ПанКофе Сервис</span><span>Ремонт кофемашин с выездом · Ростов-на-Дону</span><a href="tel:+79281115336">8 928 111-53-36</a></div></footer>
+</body></html>
